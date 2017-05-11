@@ -64,7 +64,7 @@ public class Bela {
                     Points += 10;
                 }
                 if(card.charAt(0) == '9'){
-                    Points += 9;
+                    Points += 0;
                 }
                 if(card.charAt(0) == '8'){
                     Points += 0;
