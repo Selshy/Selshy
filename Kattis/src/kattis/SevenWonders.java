@@ -1,5 +1,7 @@
 package kattis;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class SevenWonders {
@@ -8,21 +10,38 @@ public class SevenWonders {
         
         Scanner scanner = new Scanner(System.in);
         
+        String cards = scanner.next();
+        
+        ArrayList<Integer> minst = new ArrayList<>();
+        
         int T = 0;
         int C = 0;
         int G = 0;
-        String cards = scanner.next();
-        int points = 0;
+        int n;
         
-        for (int i = 0; i < 10; i++) {
+        // Räknar antal av varje
+        for (int i = 0; i < cards.length(); i++) {
             if(cards.charAt(i) == 'T'){
                 T++;
             }
-            else if(cards.charAt(i) == 'C'){
+            
+            if(cards.charAt(i) == 'C'){
                 C++;
-            } else{
+            }
+            
+            if(cards.charAt(i) == 'G'){
                 G++;
             }
         }
+        
+        minst.add(T);
+        minst.add(C);
+        minst.add(G);
+        
+        Collections.sort(minst);
+        
+        n = minst.get(0);
+        
+        System.out.println(T*T + C*C + G*G + 7 * n);
     }
 }

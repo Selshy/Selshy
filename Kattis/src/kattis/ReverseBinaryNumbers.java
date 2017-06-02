@@ -29,6 +29,8 @@ public class ReverseBinaryNumbers {
         
         
         
-        System.out.println(Integer.parseInt(rev, 2));
+        
+        
+        System.out.println(Integer.parseInt(rev, 3));
     }
 }
