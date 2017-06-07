@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ladder {
     
     Scanner scanner = new Scanner (System.in);
-    private static double h, v;
+    double h, v;
     
     public static void main(String[] args) {
         new Ladder();
