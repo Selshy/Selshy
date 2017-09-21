@@ -15,5 +15,4 @@ public class Planina {
         
         System.out.println((int) Math.pow(A, 2));
     }
-    
 }
