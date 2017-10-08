@@ -1,11 +1,11 @@
-n, w, h = input()
-n = int(n)
-w = int(w)
-h = int(h)
-hypothenuse = math.sqrt(w**2 + h**2)
+import math
+n, w, h = map(int, input().split())
+w2 = w**2
+h2 = h**2
+
 for _ in range (n):
-    a = int(input)
-    if a < hypothenuse:
+    l = int(input())
+    if l <= math.sqrt(w2+h2):
         print("DA")
     else:
         print("NE")
